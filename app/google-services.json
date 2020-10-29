@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "499397223112",
+    "firebase_url": "https://linkshare-ff6fb.firebaseio.com",
+    "project_id": "linkshare-ff6fb",
+    "storage_bucket": "linkshare-ff6fb.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:499397223112:android:7668d2ab6b0e534817bbfd",
+        "android_client_info": {
+          "package_name": "com.example.linkshare"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "499397223112-o91ft46l2gvmfr4s3ic4d3jtnoc91t3t.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.linkshare",
+            "certificate_hash": "f4be85162a241102af9f0a0f3b624e3132c1fb09"
+          }
+        },
+        {
+          "client_id": "499397223112-72v2le2uunhbuplbo6gap3396uhnigtm.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDvnGVoRGWy9s-F5JY5Vw6FcGZ3zPWm-58"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "499397223112-72v2le2uunhbuplbo6gap3396uhnigtm.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

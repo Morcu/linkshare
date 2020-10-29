@@ -22,4 +22,11 @@
         android:text="Crear"
         />
 
+    <Button
+        android:id="@+id/btnLista"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Lista"
+        />
+
 </LinearLayout>

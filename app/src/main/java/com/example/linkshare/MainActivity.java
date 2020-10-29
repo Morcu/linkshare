@@ -2,6 +2,7 @@ package com.example.linkshare;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -17,6 +18,8 @@ public class MainActivity extends AppCompatActivity {
 
     private EditText editCrear;
     private Button btnCrear;
+    private Button btnLista;
+
     private DatabaseReference tDatabase;
 
     @Override
@@ -26,6 +29,8 @@ public class MainActivity extends AppCompatActivity {
 
         editCrear = findViewById(R.id.editCrear);
         btnCrear = findViewById(R.id.btnCrear);
+        btnLista = findViewById(R.id.btnLista);
+
 
         tDatabase = FirebaseDatabase.getInstance().getReference();
 
@@ -39,5 +44,12 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        btnLista.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent myIntent = new Intent(MainActivity.this, ListActivity.class);
+                startActivity(myIntent);
+            }
+        });
     }
 }

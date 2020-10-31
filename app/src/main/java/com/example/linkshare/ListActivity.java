@@ -1,5 +1,6 @@
 package com.example.linkshare;
 
+import android.content.Context;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -35,20 +36,22 @@ public class ListActivity  extends AppCompatActivity {
         eRecycleview = findViewById(R.id.myReciclerView);
         eRecycleview.setLayoutManager(new LinearLayoutManager(this));
 
-        getEnlacesFromFirebase();
+        getEnlacesFromFirebase(getApplicationContext());
     }
 
-    private void getEnlacesFromFirebase(){
-        tDatabase.child("texto").addValueEventListener(new ValueEventListener() {
+    private void getEnlacesFromFirebase(Context context){
+        tDatabase.child("enlace").addValueEventListener(new ValueEventListener() {
             @Override
             public void onDataChange(@NonNull DataSnapshot snapshot) {
                 if(snapshot.exists()){
                     enlacesList.clear();
                     for (DataSnapshot ds: snapshot.getChildren()){
                         String texto = ds.child("titulo").getValue().toString();
-                        enlacesList.add(new Enlaces(texto));
+                        String descripcion = ds.child("descripcion").getValue().toString();
+                        String img_url = ds.child("img_url").getValue().toString();
+                        enlacesList.add(new Enlaces(texto, descripcion, img_url));
                     }
-                    eAdapter = new EnlaceAdapter(enlacesList, R.layout.list_view);
+                    eAdapter = new EnlaceAdapter(context, enlacesList, R.layout.list_view);
                     eRecycleview.setAdapter(eAdapter);
                 }
             }

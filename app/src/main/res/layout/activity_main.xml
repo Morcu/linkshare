@@ -6,21 +6,10 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity"
     android:orientation="vertical"
-    android:layout_margin="20dp">
-
-    <EditText
-        android:id="@+id/editCrear"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Introduce el texto" />
+    android:layout_margin="20dp"
+    android:gravity="center">
 
 
-    <Button
-        android:id="@+id/btnCrear"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Crear"
-        />
 
     <Button
         android:id="@+id/btnLista"
@@ -28,5 +17,13 @@
         android:layout_height="wrap_content"
         android:text="Lista"
         />
+
+    <Button
+        android:id="@+id/btnCrear"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Añadir nuevo enlace"
+        />
+
 
 </LinearLayout>

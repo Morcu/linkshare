@@ -1,6 +1,7 @@
 package com.example.linkshare.adapters;
 
 import android.content.Context;
+import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -42,7 +43,7 @@ public class EnlaceAdapter extends RecyclerView.Adapter<EnlaceAdapter.ViewHolder
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
 
         Enlaces enlace = enlacesList.get(position);
-        holder.textViewTitulo.setText(enlace.getTitulo());
+        holder.textViewTitulo.setText(Html.fromHtml("<a href="+ enlace.getUrl()+">"+ enlace.getTitulo() +"</a>"));
         holder.textViewDescripcion.setText(enlace.getDescripcion());
 
         Log.i("TAG", "____AAA___");
@@ -74,6 +75,7 @@ public class EnlaceAdapter extends RecyclerView.Adapter<EnlaceAdapter.ViewHolder
 
             this.view = view;
             this.textViewTitulo = (TextView) view.findViewById(R.id.txtTitulo);
+            this.textViewTitulo.setMovementMethod(android.text.method.LinkMovementMethod.getInstance());
             this.textViewDescripcion = (TextView) view.findViewById(R.id.txtDescripcion);
             this.imgListView = (ImageView) view.findViewById(R.id.imgListImg);
 

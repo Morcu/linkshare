@@ -16,7 +16,7 @@ import java.util.Map;
 
 public class MainActivity extends AppCompatActivity {
 
-    private EditText editCrear;
+
     private Button btnCrear;
     private Button btnLista;
 
@@ -27,7 +27,6 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        editCrear = findViewById(R.id.editCrear);
         btnCrear = findViewById(R.id.btnCrear);
         btnLista = findViewById(R.id.btnLista);
 
@@ -37,10 +36,8 @@ public class MainActivity extends AppCompatActivity {
         btnCrear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String text = editCrear.getText().toString();
-                Map<String, Object> linkMap = new HashMap<>();
-                linkMap.put("titulo", text);
-                tDatabase.child("texto").push().setValue(linkMap);
+                Intent myIntent = new Intent(MainActivity.this, ReceiveActivity.class);
+                startActivity(myIntent);
             }
         });
 

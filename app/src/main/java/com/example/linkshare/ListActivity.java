@@ -49,7 +49,8 @@ public class ListActivity  extends AppCompatActivity {
                         String texto = ds.child("titulo").getValue().toString();
                         String descripcion = ds.child("descripcion").getValue().toString();
                         String img_url = ds.child("img_url").getValue().toString();
-                        enlacesList.add(new Enlaces(texto, descripcion, img_url));
+                        String url = ds.child("url").getValue().toString();
+                        enlacesList.add(new Enlaces(texto, descripcion, img_url, url));
                     }
                     eAdapter = new EnlaceAdapter(context, enlacesList, R.layout.list_view);
                     eRecycleview.setAdapter(eAdapter);

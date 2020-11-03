@@ -15,14 +15,14 @@
         android:id="@+id/btnLista"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Lista"
+        android:text="Links List"
         />
 
     <Button
         android:id="@+id/btnCrear"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Añadir nuevo enlace"
+        android:text="New Link (Still in dev)"
         />
 
 

@@ -12,9 +12,11 @@ The main function of this app is to have a list of interesting links that you wa
 
 
 This app has the functionality to share links from the share button of your android.
-
+<p float="left">
 <img src="./img/share.png" width="30%" height="30%"/>
 <img src="./img/editSave.png" width="30%" height="30%"/>
+</p>
+
 
 You can also download the [LinkShare Chrome Extension](https://github.com/Morcu/linkShare_ChromeExtension) to have the list of links in Chrome.
 

@@ -18,7 +18,7 @@ This app has the functionality to share links from the share button of your andr
 
 You can also download the [LinkShare Chrome Extension](https://github.com/Morcu/linkShare_ChromeExtension) to have the list of links in Chrome.
 
-<img src="./img/chromeE.png" width="30%" height="30%"/>
+<img src="./img/chromeE.PNG" width="30%" height="30%"/>
 
 
 The App and the extension is still on development.

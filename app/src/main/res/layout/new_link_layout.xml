@@ -16,47 +16,22 @@
     >
 
     <com.google.android.material.textfield.TextInputEditText
-        android:id="@+id/txtRecTitulo"
+        android:id="@+id/txtNewUrl"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:hint="Titulo"
+        android:hint="Enlace"
 
         />
 
     ></com.google.android.material.textfield.TextInputLayout>
 
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        >
-
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/txtRecDesc"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:hint="Descripcion"
-
-            />
-
-        ></com.google.android.material.textfield.TextInputLayout>
-
-
-
-    <ImageView
-        android:id="@+id/imgRecImg"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        />
-
     <Button
-        android:id="@+id/btnRecCrear"
+        android:id="@+id/btnNewEnlace"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:gravity="center"
-        android:text="Crear"
+        android:text="Obtener informacion"
     />
 
 </LinearLayout>

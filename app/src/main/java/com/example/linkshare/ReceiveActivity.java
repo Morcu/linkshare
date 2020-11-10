@@ -57,7 +57,6 @@ public class ReceiveActivity extends AppCompatActivity {
         imgRecImg = findViewById(R.id.imgRecImg);
 
 
-
         tDatabase = FirebaseDatabase.getInstance().getReference();
 
         btnRecCrear.setOnClickListener(new View.OnClickListener() {
@@ -75,22 +74,31 @@ public class ReceiveActivity extends AppCompatActivity {
 
         if (Intent.ACTION_SEND.equals(action) && type != null) {
             if ("text/plain".equals(type)) {
-                handleSendText(intent); // Handle text being sent
+                String sharedText = intent.getStringExtra(Intent.EXTRA_TEXT);
+
+                if (sharedText != null) {
+                    handleSendText(sharedText); // Handle text being sent
+                }
+            }
+        }
+
+
+        if(intent !=null)
+        {
+            String strdata = intent.getExtras().getString("Uniqid");
+            String txtLink = intent.getExtras().getString("text");
+            if(strdata.equals("From_Activity_A")){
+                if (!txtLink.isEmpty()) {
+                    handleSendText(txtLink); // Handle text being sent
+                }
             }
         }
 
     }
 
 
-    void handleSendText(Intent intent) {
-        String sharedText = intent.getStringExtra(Intent.EXTRA_TEXT);
-        if (sharedText != null) {
-            Log.i("TAG", "____CCC___");
-            Log.i("TAG", sharedText);
-            url = sharedText;
-            getWebAsync(sharedText);
-
-        }
+    void handleSendText(String url) {
+        getWebAsync(url);
     }
 
 
